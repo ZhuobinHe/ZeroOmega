@@ -64,6 +64,9 @@ class Options
   _currentProfileName: null
   _revertToProfileName: null
   _watchingProfiles: {}
+  _domainRuleConditionTypes:
+    'HostWildcardCondition': true
+    'HostRegexCondition': true
   _tempProfile: null
   _tempProfileActive: false
   fallbackProfileName: 'system'
@@ -1039,6 +1042,42 @@ class Options
     @_setOptions(changes)
 
   ###*
+  # Update an existing rule in place, keeping its position in the rule list.
+  # @param {string} profileName The name of the profile owning the rule.
+  # @param {number} index The index of the rule in profile.rules.
+  # @param {{pattern: ?string, profileName: ?string}} changes The new values.
+  # @param {?string} expectTag The condition tag that was displayed to the
+  #  user, used to detect that the rule has changed in the meantime.
+  # @returns {Promise} A promise which is fulfilled when the rule is saved.
+  ###
+  updateRule: (profileName, index, changes, expectTag) ->
+    @log.method('Options#updateRule', this, arguments)
+    profile = OmegaPac.Profiles.byName(profileName, @_options)
+    if not profile?.rules?
+      return Promise.reject new Error(
+        "Cannot update rule in Profile #{profileName}")
+    rule = profile.rules[index]
+    if not rule?
+      return Promise.reject new Error('The rule no longer exists')
+    if expectTag? and OmegaPac.Conditions.tag(rule.condition) != expectTag
+      return Promise.reject new Error('The rule has been changed')
+    if not @_domainRuleConditionTypes[rule.condition.conditionType]
+      return Promise.reject new Error(
+        "Condition #{rule.condition.conditionType} cannot be edited here")
+    if changes.pattern? and changes.pattern != rule.condition.pattern
+      if not changes.pattern
+        return Promise.reject new Error('The domain must not be empty')
+      rule.condition.pattern = changes.pattern
+    if changes.profileName? and changes.profileName != rule.profileName
+      if not OmegaPac.Profiles.byName(changes.profileName, @_options)?
+        return Promise.reject new ProfileNotExistError(changes.profileName)
+      rule.profileName = changes.profileName
+    OmegaPac.Profiles.updateRevision(profile)
+    patch = {}
+    patch[OmegaPac.Profiles.nameAsKey(profile)] = profile
+    @_setOptions(patch)
+
+  ###*
   # Set the defaultProfileName of the profile.
   # @param {string>} profileName The name of the profile to modify.
   # @param {string>} defaultProfileName The defaultProfileName to set.
@@ -1084,6 +1123,18 @@ class Options
   # and the matching details
   ###
   matchProfile: (request) ->
+    @matchProfileWithOwner(request).then (match) ->
+      profile: match.profile
+      results: (item.result for item in match.results)
+
+  ###*
+  # Get the matching results of a request, together with the profile each
+  # result was matched in. The profile is needed to locate the matched rule.
+  # @param {{}} request The request to test
+  # @returns {Promise<{profile: {}, results: {}[]}>} The last matched profile
+  # and the matching details, each item being {profile, result}.
+  ###
+  matchProfileWithOwner: (request) ->
     if not @_currentProfileName
       return Promise.resolve({profile: @_externalProfile, results: []})
     results = []
@@ -1096,7 +1147,7 @@ class Options
       lastProfile = profile
       result = OmegaPac.Profiles.match(profile, request)
       break unless result?
-      results.push(result)
+      results.push({profile: profile, result: result})
       if Array.isArray(result)
         next = result[0]
       else if result.profileName
@@ -1105,6 +1156,54 @@ class Options
         break
       profile = OmegaPac.Profiles.byKey(next, @_options)
     Promise.resolve(profile: lastProfile, results: results)
+
+  ###*
+  # Find out which domain based rule applies to a hostname, if any.
+  # Only host wildcard and host regex rules are considered, since only their
+  # condition (the domain) can be edited in the popup.
+  # @param {string} hostname The hostname of the request, without the port.
+  # @returns {Promise<{rule: ?{}, tempRuleProfileName: ?string,
+  #   otherRule: ?{}, defaultProfileName: ?string}>}
+  ###
+  getHostRuleMatch: (hostname) ->
+    host = if hostname.indexOf(':') >= 0 then "[#{hostname}]" else hostname
+    request = OmegaPac.Conditions.requestFromUrl(
+      protocol: 'http:'
+      hostname: hostname
+      host: host
+      pathname: '/'
+    )
+    @matchProfileWithOwner(request).then (match) =>
+      info =
+        rule: null
+        tempRuleProfileName: null
+        otherRule: null
+        defaultProfileName: match.profile?.name ? null
+      for item in match.results
+        result = item.result
+        continue unless result?.condition?
+        if result.isTempRule
+          info.tempRuleProfileName = result.profileName
+        else if @_domainRuleConditionTypes[result.condition.conditionType]
+          owner = item.profile
+          ruleIndex = if owner?.rules? then owner.rules.indexOf(result) else -1
+          info.rule =
+            ownerProfileName: owner?.name ? null
+            ownerIsCurrent: owner?.name == @_currentProfileName
+            editable: owner?.name == @_currentProfileName and ruleIndex >= 0
+            ruleIndex: ruleIndex
+            conditionType: result.condition.conditionType
+            pattern: result.condition.pattern
+            targetProfileName: result.profileName
+            tag: OmegaPac.Conditions.tag(result.condition)
+        else
+          info.otherRule =
+            ownerProfileName: item.profile?.name ? null
+            conditionType: result.condition.conditionType
+            pattern: result.condition.pattern
+            targetProfileName: result.profileName
+        break
+      info
 
   ###*
   # Notify Options that the proxy settings are set externally.

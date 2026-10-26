@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SwitchyOmega 2.3.3\n"
+"Project-Id-Version: My Zero Omega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 10:29+0000\n"
 "PO-Revision-Date: 2018-06-13 01:52+0000\n"
@@ -15,10 +15,10 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 
 msgid "appNameShort"
-msgstr "ZeroOmega"
+msgstr "My Zero Omega"
 
 msgid "manifest_app_name"
-msgstr "ZeroOmega"
+msgstr "My Zero Omega"
 
 msgid "manifest_app_description"
 msgstr "Manage and switch between multiple proxies quickly & easily."
@@ -222,7 +222,7 @@ msgid "inputClear_restore"
 msgstr "Restore"
 
 msgid "options_title"
-msgstr "ZeroOmega Options"
+msgstr "My Zero Omega Options"
 
 msgid "options_experimental_badge"
 msgstr "α"
@@ -346,15 +346,15 @@ msgstr ""
 
 msgid "options_conflicts_lowerPriority"
 msgstr ""
-"A red badge like this on the ZeroOmega icon indicates that another app has "
-"higher priority so ZeroOmega cannot control the settings. Please try to "
-"uninstall ZeroOmega and reinstall, which should raise ZeroOmega's "
+"A red badge like this on the My Zero Omega icon indicates that another app has "
+"higher priority so My Zero Omega cannot control the settings. Please try to "
+"uninstall My Zero Omega and reinstall, which should raise My Zero Omega's "
 "priority. If you still see conflicts after reinstallation, please consider "
 "removing the other app causing the conflict."
 
 msgid "options_conflicts_higherPriority"
 msgstr ""
-"If ZeroOmega has higher priority, you can give the control back to other "
+"If My Zero Omega has higher priority, you can give the control back to other "
 "apps or system settings by selecting $SYSTEMPROFILE$ in the popup menu."
 
 msgid "options_showExternalProfile"
@@ -428,7 +428,7 @@ msgstr ""
 msgid "options_exportLegacyRuleListHelp"
 msgstr ""
 "Enable this option only if you publish rule lists for users of those projects.<"
-"br>Please consider advising your audience to upgrade to ZeroOmega for the "
+"br>Please consider advising your audience to upgrade to My Zero Omega for the "
 "improvements."
 
 msgid "options_group_importExportSettings"
@@ -444,7 +444,7 @@ msgid "options_restoreLocal"
 msgstr "Restore from file"
 
 msgid "options_restoreLocalHelp"
-msgstr "Restore your ZeroOmega options from a local file."
+msgstr "Restore your My Zero Omega options from a local file."
 
 msgid "options_restoreOnline"
 msgstr "Restore from online"
@@ -602,7 +602,7 @@ msgstr "Authentication"
 
 msgid "options_proxy_authNotSupported"
 msgstr "Your browser DOES NOT support $PROTOCOLDISP$ proxy authentication! "
-"Please do not report this issue to ZeroOmega. Contact the support for "
+"Please do not report this issue to My Zero Omega. Contact the support for "
 "your browser instead."
 
 msgid "options_proxy_authAllWarningPac"
@@ -852,19 +852,19 @@ msgstr ""
 "adding a rule list."
 
 msgid "options_modalHeader_welcome"
-msgstr "Welcome to ZeroOmega"
+msgstr "Welcome to My Zero Omega"
 
 msgid "options_welcomeNormal"
-msgstr "You have successfully installed ZeroOmega, the ultimate proxy switcher."
+msgstr "You have successfully installed My Zero Omega, the ultimate proxy switcher."
 
 msgid "options_welcomeNormalGuide"
 msgstr ""
-"Please tell ZeroOmega about your proxies through the options page. Let's "
+"Please tell My Zero Omega about your proxies through the options page. Let's "
 "see how."
 
 msgid "options_welcomeUpgrade"
 msgstr ""
-"You have successfully upgraded to ZeroOmega. Don't panic, your existing "
+"You have successfully upgraded to My Zero Omega. Don't panic, your existing "
 "options are fully preserved."
 
 msgid "options_welcomeUpgradeGuide"
@@ -952,7 +952,7 @@ msgid "options_profileNameEmpty"
 msgstr "The name of the profile must not be empty."
 
 msgid "popup_title"
-msgstr "ZeroOmega Popup"
+msgstr "My Zero Omega Popup"
 
 msgid "options_modalHeader_proxyAuth"
 msgstr "Proxy Authentication"
@@ -1116,19 +1116,19 @@ msgstr "Download Profile Now"
 msgid "options_guide_fixedProfileStep"
 msgstr ""
 "A <b>Proxy Profile</b> contains settings like server ip &amp; port for proxy.<"
-"br>Profiles are the the basic configuration units in ZeroOmega.<br>We have "
+"br>Profiles are the the basic configuration units in My Zero Omega.<br>We have "
 "already created an example profile for you. Try opening it."
 
 msgid "options_guide_fixedServersStep"
 msgstr ""
-"You can fill in your proxy server and port here as you like.<br>ZeroOmega <"
+"You can fill in your proxy server and port here as you like.<br>My Zero Omega <"
 "b>does not come with any proxy servers</b>.<br>Please consult your network "
 "provider or proxy software manual if you don't know what should be filled in "
 "here."
 
 msgid "options_guide_autoSwitchProfileStep"
 msgstr ""
-"You can tell ZeroOmega to switch between proxies automatically through the "
+"You can tell My Zero Omega to switch between proxies automatically through the "
 "mighty <b>Switch Profile</b>.<br>However, its features cannot be covered in "
 "this quick guide.<br>You can open this profile to unlock its power some time "
 "later."
@@ -1140,7 +1140,7 @@ msgstr ""
 
 msgid "options_guide_conditionStep"
 msgstr ""
-"ZeroOmega can apply different profiles to requests based on <b>conditions</"
+"My Zero Omega can apply different profiles to requests based on <b>conditions</"
 "b>.<br> For example, the <b>Host wildcard</b> condition allows you to set the "
 "profile for all URLs in a domain."
 
@@ -1151,7 +1151,7 @@ msgstr ""
 
 msgid "options_guide_conditionProfileStep"
 msgstr ""
-"ZeroOmega applies the selected profile here to <b>any request matching the "
+"My Zero Omega applies the selected profile here to <b>any request matching the "
 "condition.</b> <br> The special <b>\"[Direct]\" profile</b> will cause the "
 "request to be sent without any proxy."
 
@@ -1195,14 +1195,14 @@ msgstr ""
 "extension(s)."
 
 msgid "popup_proxyNotControllable_upgrade"
-msgstr "Proxy settings are now controlled by a newer version of ZeroOmega."
+msgstr "Proxy settings are now controlled by a newer version of My Zero Omega."
 
 msgid "popup_proxyNotControllableDetails"
-msgstr "You cannot switch profiles with ZeroOmega unless you fix the problem above."
+msgstr "You cannot switch profiles with My Zero Omega unless you fix the problem above."
 
 msgid "popup_proxyNotControllableDetails_upgrade"
 msgstr ""
-"You can't enable two (or more) versions of ZeroOmega at the same time. "
+"You can't enable two (or more) versions of My Zero Omega at the same time. "
 "Please disable one of them."
 
 msgid "popup_proxyNotControllableManage"
@@ -1239,7 +1239,7 @@ msgid "popup_requestErrorWarning"
 msgstr "A few resources failed to load due to issues with your network, proxy server or the webpage."
 
 msgid "popup_requestErrorWarningHelp"
-msgstr "ZeroOmega is just the reporter of these issues, not the cause of them."
+msgstr "My Zero Omega is just the reporter of these issues, not the cause of them."
 
 msgid "popup_requestErrorAddCondition"
 msgstr "You can review the following domains and use proxy for them when appropriate."
@@ -1262,7 +1262,7 @@ msgstr ""
 "\n"
 "\n"
 "<!-- Please write your comment ABOVE this line. -->\n"
-"ZeroOmega $projectVersion$\n"
+"My Zero Omega $projectVersion$\n"
 "$userAgent$"
 
 msgid "browserAction_profileDetails_PacProfile"
@@ -1281,11 +1281,11 @@ msgid "browserAction_profileDetails_RuleListProfile"
 msgstr "(switching based on rule list)"
 
 msgid "browserAction_titleNormal"
-msgstr "ZeroOmega:: $PROFILE$"
+msgstr "My Zero Omega:: $PROFILE$"
 
 msgid "browserAction_titleWithResult"
 msgstr ""
-"ZeroOmega:: $1:PROFILE$\n"
+"My Zero Omega:: $1:PROFILE$\n"
 "$3:DETAILS$"
 
 msgid "browserAction_titleNewerOptions"
@@ -1349,14 +1349,14 @@ msgid "about_experimental_warning_moz"
 msgstr "Mozilla Firefox support is highly experimental! If you encounter issues, please report using the buttons below."
 
 msgid "about_disclaimer_networkService"
-msgstr "ZeroOmega does not provide proxies, VPNs, or other network services."
+msgstr "My Zero Omega does not provide proxies, VPNs, or other network services."
 
 msgid "about_disclaimer_privacy"
-msgstr "ZeroOmega does not track you or insert ads into webpages. Please see"
+msgstr "My Zero Omega does not track you or insert ads into webpages. Please see"
 " our <a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#english'>privacy policy</a>."
 
 msgid "about_help"
-msgstr "Other questions? Need help with using ZeroOmega? Please see our "
+msgstr "Other questions? Need help with using My Zero Omega? Please see our "
 "<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/FAQ'>FAQ</a>."
 
 msgid "about_copyright"
@@ -1364,7 +1364,103 @@ msgstr "Copyright 2012-2017 <a href='https://github.com/FelisCatus/SwitchyOmega/
 "Copyright 2024-2025 <a href='https://github.com/zero-peak/ZeroOmega/graphs/contributors'>The ZeroOmega Authors</a>."
 
 msgid "about_credits"
-msgstr "ZeroOmega is made possible by the <a href='https://github.com/zero-peak/ZeroOmega'>ZeroOmega</a> open source project and other <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>open source software</a>."
+msgstr "My Zero Omega is made possible by the <a href='https://github.com/zero-peak/ZeroOmega'>My Zero Omega</a> open source project and other <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>open source software</a>."
 
 msgid "about_license"
-msgstr "ZeroOmega is <a href='https://www.gnu.org/philosophy/free-sw.en.html'>free software</a> licensed under <a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> Version 3 or later."
+msgstr "My Zero Omega is <a href='https://www.gnu.org/philosophy/free-sw.en.html'>free software</a> licensed under <a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> Version 3 or later."
+
+msgid "quickRules_title"
+msgstr "Quick Rules"
+
+msgid "quickRules_currentProfile"
+msgstr "Current profile: $PROFILE$"
+
+msgid "quickRules_domainCount"
+msgstr "$COUNT$ domains on this page"
+
+msgid "quickRules_searchPlaceholder"
+msgstr "Search domains"
+
+msgid "quickRules_onlyUnmatched"
+msgstr "Only unmatched"
+
+msgid "quickRules_mainFrame"
+msgstr "Main document"
+
+msgid "quickRules_requestCount"
+msgstr "$COUNT$ requests"
+
+msgid "quickRules_unmatched"
+msgstr "No domain rule matched"
+
+msgid "quickRules_defaultLabel"
+msgstr "default:"
+
+msgid "quickRules_edit"
+msgstr "Edit"
+
+msgid "quickRules_add"
+msgstr "Add"
+
+msgid "quickRules_collapse"
+msgstr "Collapse"
+
+msgid "quickRules_patternLabel"
+msgstr "Domain"
+
+msgid "quickRules_patternExact"
+msgstr "exact match"
+
+msgid "quickRules_patternRequired"
+msgstr "Please enter a domain."
+
+msgid "quickRules_targetLabel"
+msgstr "Result profile"
+
+msgid "quickRules_sharedWarning"
+msgstr "$COUNT$ domains on this page share this rule; saving will change all of them."
+
+msgid "quickRules_tempRuleHint"
+msgstr "Handled by a temp rule; not managed here."
+
+msgid "quickRules_otherRuleHint"
+msgstr "Matched by a $TYPE$ rule; not managed here."
+
+msgid "quickRules_ownerHint"
+msgstr "Rule belongs to $PROFILE$"
+
+msgid "quickRules_openInOptions"
+msgstr "Open in options"
+
+msgid "quickRules_saved"
+msgstr "Rule saved"
+
+msgid "quickRules_added"
+msgstr "Rule added"
+
+msgid "quickRules_saveFailed"
+msgstr "Failed to save the rule."
+
+msgid "quickRules_stale"
+msgstr "The rule has changed, the list has been refreshed."
+
+msgid "quickRules_loadFailed"
+msgstr "Failed to read requests: $ERROR$"
+
+msgid "quickRules_noTab"
+msgstr "Cannot find the current tab."
+
+msgid "quickRules_notSupported"
+msgstr "The current profile does not support rules. Switch to an auto switch profile to edit."
+
+msgid "quickRules_loading"
+msgstr "Reading requests on this page…"
+
+msgid "quickRules_empty"
+msgstr "No requests recorded on this page yet."
+
+msgid "quickRules_emptyHelp"
+msgstr "For single-page apps, press refresh. Data is lost after the extension restarts."
+
+msgid "quickRules_noMatch"
+msgstr "No domain matches the filter."

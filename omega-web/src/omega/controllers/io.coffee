@@ -69,7 +69,7 @@ angular.module('omega').controller 'IoCtrl', (
       plainOptions = angular.fromJson(angular.toJson($rootScope.options))
       content = JSON.stringify(plainOptions)
       blob = new Blob [content], {type: "text/plain;charset=utf-8"}
-      filename = """ZeroOmegaOptions-#{new Date().toISOString()}.bak"""
+      filename = """MyZeroOmegaOptions-#{new Date().toISOString()}.bak"""
       downloadFile(blob, filename)
 
   $scope.importSuccess = ->
@@ -119,7 +119,7 @@ angular.module('omega').controller 'IoCtrl', (
 
   $scope.enableOptionsSync = (args = {}) ->
     createNewGist = (gistToken) ->
-      content = """ZeroOmega Gist Sync(#{moment()
+      content = """My Zero Omega Gist Sync(#{moment()
         .format('YYYY-MM-DD HH:mm:ss')})"""
       fetch('https://api.github.com/gists', {
         method: 'POST'
@@ -127,7 +127,7 @@ angular.module('omega').controller 'IoCtrl', (
           'Authorization': "token #{gistToken}"
           'Content-Type': 'application/json'
         body: JSON.stringify({
-          description: 'Init ZeroOmega Gist'
+          description: 'Init My Zero Omega Gist'
           public: false
           files: { 'readme.md': { content } }
         })

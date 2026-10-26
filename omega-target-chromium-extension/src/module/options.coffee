@@ -368,4 +368,46 @@ class ChromeOptions extends OmegaTarget.Options
         errorCount: errorCount
       }
 
+  ###*
+  # List all hostnames requested by a tab, with the domain rule that applies
+  # to each of them, so that rules can be reviewed and edited from the popup.
+  # @param {number} tabId The id of the tab to inspect.
+  # @returns {Promise<{}[]>} A promise for the list of domain infos.
+  ###
+  getTabDomains: (tabId) ->
+    unless @_requestMonitor
+      originalEnabled = @_monitorWebRequests
+      @setMonitorWebRequests(true)
+      @_monitorWebRequests = originalEnabled
+    info = @_requestMonitor?.tabInfo?[tabId]
+    domains = Object.create(null)
+    for own requestId, req of (info?.requests or {})
+      url = req?.url
+      continue unless /^https?:/i.test(url ? '')
+      hostname = Url.parse(url).hostname
+      continue unless hostname
+      domain = domains[hostname] ?=
+        hostname: hostname
+        requestCount: 0
+        hasMainFrame: false
+      domain.requestCount++
+      domain.hasMainFrame = true if req.type == 'main_frame'
+    list = (domain for own hostname, domain of domains)
+    list.sort (a, b) ->
+      return -1 if a.hostname < b.hostname
+      return 1 if a.hostname > b.hostname
+      0
+    Promise.all(list.map((domain) =>
+      @getHostRuleMatch(domain.hostname).then (match) ->
+        domain[key] = value for own key, value of match
+        domain
+    )).then (domains) ->
+      shared = Object.create(null)
+      for domain in domains when domain.rule?
+        key = "#{domain.rule.ownerProfileName}\u0000#{domain.rule.ruleIndex}"
+        shared[key] ?= 0
+        shared[key]++
+        domain.rule.sharedHostCount = shared[key]
+      domains
+
 module.exports = ChromeOptions

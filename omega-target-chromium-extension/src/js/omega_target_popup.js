@@ -74,6 +74,13 @@ OmegaTargetPopup = {
   addCondition: function(condition, profileName, cb){
     callBackground('addCondition', [condition, profileName], cb)
   },
+  getTabDomains: function(tabId, cb){
+    callBackground('getTabDomains', [tabId], cb)
+  },
+  updateRule: function(profileName, ruleIndex, changes, expectTag, cb){
+    callBackground('updateRule',
+      [profileName, ruleIndex, changes, expectTag], cb)
+  },
   getTempRules: function(cb){
     callBackground('getTempRules', [], cb);
   },

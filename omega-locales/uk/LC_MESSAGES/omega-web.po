@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SwitchyOmega 2.3.3\n"
+"Project-Id-Version: My Zero Omega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 10:29+0000\n"
 "PO-Revision-Date: 2022-08-25 14:16+0000\n"
@@ -16,10 +16,10 @@ msgstr ""
 "X-Generator: Weblate 4.14-dev\n"
 
 msgid "appNameShort"
-msgstr "SwitchyOmega"
+msgstr "My Zero Omega"
 
 msgid "manifest_app_name"
-msgstr "Проксі SwitchyOmega"
+msgstr "My Zero Omega"
 
 msgid "manifest_app_description"
 msgstr "Керуйте і перемикайтеся між проксі серверами швидко і легко."
@@ -231,7 +231,7 @@ msgid "inputClear_restore"
 msgstr "Відновити"
 
 msgid "options_title"
-msgstr "Налаштування SwitchyOmega"
+msgstr "Налаштування My Zero Omega"
 
 msgid "options_experimental_badge"
 msgstr "α"
@@ -291,7 +291,7 @@ msgstr "Клавіатурні скорочення"
 #, fuzzy
 msgid "options_menuShortcutHelp"
 msgstr ""
-"Натискання гарячої клавіші відкриє контекстне меню SwitchyOmega. (Типово Alt "
+"Натискання гарячої клавіші відкриє контекстне меню My Zero Omega. (Типово Alt "
 "+ Shift + O)."
 
 msgid "options_menuShortcutMore"
@@ -364,15 +364,15 @@ msgstr ""
 
 msgid "options_conflicts_lowerPriority"
 msgstr ""
-"A red badge like this on the SwitchyOmega icon indicates that another app has "
-"higher priority so SwitchyOmega cannot control the settings. Please try to "
-"uninstall SwitchyOmega and reinstall, which should raise SwitchyOmega's "
+"A red badge like this on the My Zero Omega icon indicates that another app has "
+"higher priority so My Zero Omega cannot control the settings. Please try to "
+"uninstall My Zero Omega and reinstall, which should raise My Zero Omega's "
 "priority. If you still see conflicts after reinstallation, please consider "
 "removing the other app causing the conflict."
 
 msgid "options_conflicts_higherPriority"
 msgstr ""
-"If SwitchyOmega has higher priority, you can give the control back to other "
+"If My Zero Omega has higher priority, you can give the control back to other "
 "apps or system settings by selecting $SYSTEMPROFILE$ in the popup menu."
 
 msgid "options_showExternalProfile"
@@ -457,7 +457,7 @@ msgid "options_exportLegacyRuleListHelp"
 msgstr ""
 "Увімкніть цю функцію, тільки якщо ви публікуєте списки правил для "
 "користувачів цих проектів.<br>Подумайте про те, щоб порадити вашим знайомим "
-"перейти на SwitchyOmega."
+"перейти на My Zero Omega."
 
 #, fuzzy
 msgid "options_group_importExportSettings"
@@ -476,7 +476,7 @@ msgstr "Відновити з файлу"
 
 #, fuzzy
 msgid "options_restoreLocalHelp"
-msgstr "Відновити параметри SwitchyOmega з локального файлу."
+msgstr "Відновити параметри My Zero Omega з локального файлу."
 
 #, fuzzy
 msgid "options_restoreOnline"
@@ -608,7 +608,7 @@ msgstr "автентифікація"
 
 msgid "options_proxy_authNotSupported"
 msgstr "Your browser DOES NOT support $PROTOCOLDISP$ proxy authentication! "
-"Please do not report this issue to SwitchyOmega. Contact the support for "
+"Please do not report this issue to My Zero Omega. Contact the support for "
 "your browser instead."
 
 #, fuzzy
@@ -856,23 +856,23 @@ msgstr ""
 "іншими, додавши список правил."
 
 msgid "options_modalHeader_welcome"
-msgstr "Вітаємо у SwitchyOmega"
+msgstr "Вітаємо у My Zero Omega"
 
 #, fuzzy
 msgid "options_welcomeNormal"
 msgstr ""
-"Ви успішно встановили SwitchyOmega, кращий інструмент для налаштування "
+"Ви успішно встановили My Zero Omega, кращий інструмент для налаштування "
 "проксі."
 
 #, fuzzy
 msgid "options_welcomeNormalGuide"
 msgstr ""
-"Будь ласка, повідомте SwitchyOmega ваші проксі в параметрах. Подивимося як."
+"Будь ласка, повідомте My Zero Omega ваші проксі в параметрах. Подивимося як."
 
 #, fuzzy
 msgid "options_welcomeUpgrade"
 msgstr ""
-"Ви успішно оновилися до SwitchyOmega. Не хвилюйтеся, ваші існуючі параметри "
+"Ви успішно оновилися до My Zero Omega. Не хвилюйтеся, ваші існуючі параметри "
 "повністю збережені."
 
 #, fuzzy
@@ -972,7 +972,7 @@ msgid "options_profileNameEmpty"
 msgstr "Ім'я профілю не може бути порожньо."
 
 msgid "popup_title"
-msgstr "Спиваюче вікно SwitchyOmega"
+msgstr "Спиваюче вікно My Zero Omega"
 
 #, fuzzy
 msgid "options_modalHeader_proxyAuth"
@@ -1157,13 +1157,13 @@ msgstr "Завантажити профіль зараз"
 msgid "options_guide_fixedProfileStep"
 msgstr ""
 "<B>Профіль проксі</b>містить настройки, такі як IP-адреса і порт сервера для "
-"проксі.<br>Профілі - це основні одиниці конфігурації в SwitchyOmega.<br>Ми "
+"проксі.<br>Профілі - це основні одиниці конфігурації в My Zero Omega.<br>Ми "
 "вже створили приклад профілю для вас. Спробуйте відкрити його."
 
 #, fuzzy
 msgid "options_guide_fixedServersStep"
 msgstr ""
-"Ви можете тут вказати свій проксі сервер і порт.<br>SwitchyOmega<b>не "
+"Ви можете тут вказати свій проксі сервер і порт.<br>My Zero Omega<b>не "
 "поставляється з будь-якими проксі серверами</b>.<br>ласка, зверніться до "
 "свого провайдера мережі або до керівництва по настройки проксі, якщо ви не "
 "знаєте що робити далі."
@@ -1171,7 +1171,7 @@ msgstr ""
 #, fuzzy
 msgid "options_guide_autoSwitchProfileStep"
 msgstr ""
-"Ви можете попросити SwitchyOmega автоматично перемикатися між проксі "
+"Ви можете попросити My Zero Omega автоматично перемикатися між проксі "
 "серверами за допомогою потужного<b>перемикати профілю</b>.<br>Однак його "
 "функції не можуть бути розглянуті в цьому короткому посібнику.<br>Ви можете "
 "відкрити цей профіль, щоб пізніше розкрити деякі його можливості."
@@ -1186,7 +1186,7 @@ msgstr ""
 #, fuzzy
 msgid "options_guide_conditionStep"
 msgstr ""
-"SwitchyOmega може застосовувати різні профілі до запитів на основі<b>умов</"
+"My Zero Omega може застосовувати різні профілі до запитів на основі<b>умов</"
 "b>.<br>Наприклад, умова<b>Шаблон хоста</b>дозволяє вам встановити профіль "
 "для всіх URL-адрес в домені."
 
@@ -1199,7 +1199,7 @@ msgstr ""
 #, fuzzy
 msgid "options_guide_conditionProfileStep"
 msgstr ""
-"SwitchyOmega застосовує обраний профіль тут до<b>будь-якого запиту, "
+"My Zero Omega застосовує обраний профіль тут до<b>будь-якого запиту, "
 "відповідного умові</b>.<br>Спеціальний профіль<b>«[Безпосередньо]»</"
 "b>призведе до відправки запиту без будь-якого проксі."
 
@@ -1249,18 +1249,18 @@ msgstr ""
 "Налаштування проксі відключені явним запитом інших додатків або розширень."
 
 msgid "popup_proxyNotControllable_upgrade"
-msgstr "Налаштування проксі тепер контролюються новішою версією SwitchyOmega."
+msgstr "Налаштування проксі тепер контролюються новішою версією My Zero Omega."
 
 #, fuzzy
 msgid "popup_proxyNotControllableDetails"
 msgstr ""
-"Ви не можете перемикати профілі за допомогою SwitchyOmega, якщо не вирішите "
+"Ви не можете перемикати профілі за допомогою My Zero Omega, якщо не вирішите "
 "проблему вище."
 
 #, fuzzy
 msgid "popup_proxyNotControllableDetails_upgrade"
 msgstr ""
-"Ви не можете включити дві (або більше) версії SwitchyOmega одночасно. Будь "
+"Ви не можете включити дві (або більше) версії My Zero Omega одночасно. Будь "
 "ласка, вимкніть одну з них."
 
 msgid "popup_proxyNotControllableManage"
@@ -1295,7 +1295,7 @@ msgstr ""
 
 #, fuzzy
 msgid "popup_requestErrorWarningHelp"
-msgstr "SwitchyOmega є просто оглядачем цих проблем, а не їх причиною."
+msgstr "My Zero Omega є просто оглядачем цих проблем, а не їх причиною."
 
 #, fuzzy
 msgid "popup_requestErrorAddCondition"
@@ -1326,7 +1326,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"<! - Будь ласка, напишіть свій коментар над цим рядком.-->SwitchyOmega "
+"<! - Будь ласка, напишіть свій коментар над цим рядком.-->My Zero Omega "
 "$projectVersion$ $userAgent$"
 
 msgid "browserAction_profileDetails_PacProfile"
@@ -1347,11 +1347,11 @@ msgstr "(перемикання за списком правил)"
 
 #, fuzzy
 msgid "browserAction_titleNormal"
-msgstr "SwitchyOmega :: $PROFILE$"
+msgstr "My Zero Omega :: $PROFILE$"
 
 #, fuzzy
 msgid "browserAction_titleWithResult"
-msgstr "SwitchyOmega :: $1: PROFILE$ $3: DETAILS$"
+msgstr "My Zero Omega :: $1: PROFILE$ $3: DETAILS$"
 
 msgid "browserAction_titleNewerOptions"
 msgstr ""
@@ -1424,20 +1424,20 @@ msgstr ""
 
 msgid "about_disclaimer_networkService"
 msgstr ""
-"SwitchyOmega не надає адреси проксі-серверів, VPN-серверів або інших "
+"My Zero Omega не надає адреси проксі-серверів, VPN-серверів або інших "
 "мережевих сервісів."
 
 #, fuzzy
 msgid "about_disclaimer_privacy"
 msgstr ""
-"SwitchyOmega не відслідковує вас і не вставляє рекламу в веб-сторінки. Будь "
+"My Zero Omega не відслідковує вас і не вставляє рекламу в веб-сторінки. Будь "
 "ласка, ознайомтеся з нашою <ahref='https://github.com/FelisCatus/"
 "SwitchyOmega/wiki/Privacy#english'>політикою конфіденційності</a>."
 
 #, fuzzy
 msgid "about_help"
 msgstr ""
-"Інші питання? Потрібна допомога з використанням SwitchyOmega? Будь ласка, "
+"Інші питання? Потрібна допомога з використанням My Zero Omega? Будь ласка, "
 "дивіться наш <ahref='https://github.com/FelisCatus/SwitchyOmega/wiki/"
 "FAQ'>FAQ</a>."
 
@@ -1445,20 +1445,20 @@ msgstr ""
 msgid "about_copyright"
 msgstr ""
 "Авторське право 2012-2017 <ahref='https://github.com/FelisCatus/SwitchyOmega/"
-"blob/master/AUTHORS'>Автори SwitchyOmega</a>. Всі права захищені."
+"blob/master/AUTHORS'>Автори My Zero Omega</a>. Всі права захищені."
 
 #, fuzzy
 msgid "about_credits"
 msgstr ""
-"SwitchyOmega стала можливою завдяки проекту <ahref='https://github.com/"
-"FelisCatus/SwitchyOmega'>SwitchyOmega</a>з відкритим вихідним кодом і іншому "
+"My Zero Omega стала можливою завдяки проекту <ahref='https://github.com/"
+"FelisCatus/SwitchyOmega'>My Zero Omega</a>з відкритим вихідним кодом і іншому "
 "<ahref='https://github.com/FelisCatus/SwitchyOmega /blob /master /"
 "AUTHORS'>програмного забезпечення з відкритим вихідним кодом</a>."
 
 #, fuzzy
 msgid "about_license"
 msgstr ""
-"SwitchyOmega - це <ahref='https://www.gnu.org/philosophy/free-"
+"My Zero Omega - це <ahref='https://www.gnu.org/philosophy/free-"
 "sw.en.html'>безкоштовне програмне забезпечення</a>ліцензоване по "
 "<ahref='https://www.gnu.org /licenses /gpl.html'>GNU General Public License</"
 "a>Версії 3 або пізнішої."

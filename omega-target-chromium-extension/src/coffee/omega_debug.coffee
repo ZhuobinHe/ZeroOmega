@@ -17,7 +17,7 @@ window.OmegaDebug =
   downloadLog: ->
     idbKeyval.entries(logStore).then((entries) ->
       zip = new JSZip()
-      zipFolder = zip.folder('ZeroOmega')
+      zipFolder = zip.folder('MyZeroOmega')
       entries.forEach((entry) ->
         if entry[0] != 'lastError'
           zipFolder.file(entry[1].date + '.log', entry[1].val)
@@ -30,7 +30,7 @@ window.OmegaDebug =
         type: 'blob'
       })
     ).then((blob) ->
-      filename = "ZeroOmegaLog_#{Date.now()}.zip"
+      filename = "MyZeroOmegaLog_#{Date.now()}.zip"
       saveAs(blob, filename)
     )
   resetOptions: ->
@@ -71,7 +71,7 @@ window.OmegaDebug =
         body ||= """
           \n\n
           <!-- Please write your comment ABOVE this line. -->
-          ZeroOmega #{env.projectVersion}
+          My Zero Omega #{env.projectVersion}
           #{env.userAgent}
         """
         finalUrl = url + encodeURIComponent(body)

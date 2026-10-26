@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Rules</title>
+  <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../lib/zero-dependencies/toastify/toastify.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div class="qr-app">
+    <header class="qr-header">
+      <div class="qr-title-row">
+        <span class="qr-title" id="qr-title"></span>
+        <span class="qr-header-buttons">
+          <button class="btn btn-default btn-xs" id="qr-refresh" type="button">
+            <span class="glyphicon glyphicon-refresh"></span>
+          </button>
+          <button class="btn btn-default btn-xs" id="qr-options" type="button">
+            <span class="glyphicon glyphicon-wrench"></span>
+          </button>
+        </span>
+      </div>
+      <div class="qr-subtitle" id="qr-subtitle"></div>
+    </header>
+    <div class="qr-filter">
+      <input class="form-control input-sm qr-search" id="qr-search" type="search">
+      <label class="qr-only-unmatched">
+        <input type="checkbox" id="qr-only-unmatched">
+        <span id="qr-only-unmatched-label"></span>
+      </label>
+    </div>
+    <div class="qr-notice" id="qr-notice"></div>
+    <ul class="qr-list" id="qr-list"></ul>
+    <div class="qr-empty" id="qr-empty"></div>
+  </div>
+  <script src="../../lib/zero-dependencies/iframeResizer/iframeResizer.contentWindow.min.js"></script>
+  <script src="../../lib/script.js/script.min.js"></script>
+  <script src="./js/loader.js"></script>
+</body>
+</html>

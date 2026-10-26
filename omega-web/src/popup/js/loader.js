@@ -11,7 +11,8 @@ $script('../js/omega_target_popup.js', 'om-target', function() {
         const reqinfoEl = document.getElementById('js-reqinfo');
         const addruleEl = document.getElementById('js-addrule');
         reqinfoEl.setAttribute('href', '../popup.html?activeTabId=' + activeTab.id + '#!requestInfo')
-        addruleEl.setAttribute('href', '../popup.html?activeTabId=' + activeTab.id + '#!addRule')
+        addruleEl.setAttribute('href',
+          'quick_rules/index.html?tabId=' + activeTab.id)
       }
     }).catch(function(){})
     OmegaTargetPopup.getActivePageInfo(function(err, info) {
